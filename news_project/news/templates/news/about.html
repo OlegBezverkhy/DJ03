@@ -1,0 +1,12 @@
+<!-- about.html -->
+{% extends 'news/base.html' %}
+{% load static %}
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+    <div class="text-center">
+        <h1>Обо мне</h1>
+        <p>Меня зовут Ларсен, я немецкая овчарка и я только начал свой путь в web разработке...</p>
+        <img src="{% static 'img/my_photo600 .jpg' %}" class="img-fluid rounded" alt="Мое фото">
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+body {
+    background-color: #f8f9fa;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}

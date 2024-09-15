@@ -1,0 +1,33 @@
+{% extends 'news\base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <!-- Изображение новости -->
+                    <img src="{{ news_post.picture.url }}" class="card-img-top" alt="Изображение новости">
+
+                    <div class="card-body">
+                        <!-- Заголовок новости -->
+                        <h1 class="card-title">{{ news_post.title }}</h1>
+
+                        <!-- Автор и дата публикации -->
+                        <p class="card-text">
+                            <small class="text-muted">
+                                Автор: {{ news_post.author }} | Опубликовано: {{ news_post.pub_date|date:"d M Y" }}
+                            </small>
+                        </p>
+
+                        <!-- Текст новости -->
+                        <p class="card-text">{{ news_post.text |linebreaks}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {% include 'includes/footer.html' %}
+{% endblock %}
